@@ -46,6 +46,11 @@
         "^Nuke.Common",
         "^Rocket\\.Surgery\\.Nuke$"
       ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
       "labels": [
         ":truck: private-dependencies"
       ],
