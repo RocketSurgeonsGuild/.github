@@ -41,30 +41,10 @@
       "matchManagers": [
         "nuget"
       ],
-      "groupName": "nuke",
-      "matchPackagePatterns": [
-        "^nuke.globaltool",
-        "^Nuke.Common",
-        "^Rocket\\.Surgery\\.Nuke$"
-      ],
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch"
-      ],
-      "labels": [
-        ":truck: private-dependencies"
-      ],
-      "automerge": true
-    },
-    {
-      "matchManagers": [
-        "nuget"
-      ],
       "groupName": "build dependencies",
       "matchPackagePatterns": [
         "^Microsoft\\.NET\\.Test\\.Sdk$",
-        "^Rocket\\.Surgery\\.MSBuild$"
+        "^Rocket\\.Surgery\\.MSBuild"
       ],
       "labels": [
         ":truck: private-dependencies"
@@ -431,6 +411,26 @@
       "matchPackagePatterns": [
         "^ReactiveMarbles"
       ]
+    },
+    {
+      "matchManagers": [
+        "nuget"
+      ],
+      "groupName": "nuke",
+      "matchPackagePatterns": [
+        "^nuke.globaltool",
+        "^Nuke.Common",
+        "^Rocket\\.Surgery\\.Nuke"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
+      "automerge": true
     }
   ]
 }
