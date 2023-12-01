@@ -63,6 +63,16 @@
     },
     {
       "matchPackagePatterns": [
+        "^Polyfill"
+      ],
+      "groupName": "polyfill",
+      "labels": [
+        ":truck: private-dependencies"
+      ],
+      "automerge": true
+    },
+    {
+      "matchPackagePatterns": [
         "^FluentAssertions"
       ],
       "groupName": "fluentassertions",
