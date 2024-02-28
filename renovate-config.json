@@ -275,6 +275,14 @@
       ]
     },
     {
+      "description": "roslyn",
+      "groupName": "roslyn",
+      "enabled": true,
+      "matchSourceUrlPrefixes": [
+        "https://github.com/dotnet/roslyn"
+      ]
+    },
+    {
       "description": "dotnet msbuild",
       "groupName": "dotnet msbuild",
       "matchSourceUrlPrefixes": ["https://github.com/dotnet/msbuild"]
