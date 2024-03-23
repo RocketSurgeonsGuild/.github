@@ -47,9 +47,11 @@
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^Roslynator"],
       "groupName": "roslynator",
       "labels": [":truck: private-dependencies"],
+      "matchSourceUrls": [
+        "https://github.com/dotnet/roslynator"
+      ],
       "automerge": true
     },
     {
@@ -187,28 +189,28 @@
       "groupName": "Rocket Surgery Other"
     },
     {
-      "matchSourceUrlPrefixes": [
+      "matchSourceUrls": [
         "https://github.com/RocketSurgeonsGuild/LaunchPad"
       ],
       "labels": [":package: dependencies"],
       "groupName": "Rocket Surgery Launch Pad"
     },
     {
-      "matchSourceUrlPrefixes": [
+      "matchSourceUrls": [
         "https://github.com/RocketSurgeonsGuild/Conventions"
       ],
       "labels": [":package: dependencies"],
       "groupName": "Rocket Surgery Conventions"
     },
     {
-      "matchSourceUrlPrefixes": [
+      "matchSourceUrls": [
         "https://github.com/RocketSurgeonsGuild/Testing"
       ],
       "labels": [":truck: private-dependencies"],
       "groupName": "Rocket Surgery Testing"
     },
     {
-      "matchSourceUrlPrefixes": [
+      "matchSourceUrls": [
         "https://github.com/RocketSurgeonsGuild/Extensions"
       ],
       "labels": [":package: dependencies"],
@@ -255,7 +257,7 @@
       "description": "dotnet monorepo",
       "groupName": "dotnet monorepo",
       "enabled": false,
-      "matchSourceUrlPrefixes": [
+      "matchSourceUrls": [
         "https://github.com/dotnet/aspnetcore",
         "https://github.com/dotnet/efcore",
         "https://github.com/dotnet/extensions",
@@ -267,7 +269,7 @@
       "groupName": "dotnet monorepo [minor/patch]",
       "enabled": true,
       "matchUpdateTypes": ["minor", "patch"],
-      "matchSourceUrlPrefixes": [
+      "matchSourceUrls": [
         "https://github.com/dotnet/aspnetcore",
         "https://github.com/dotnet/efcore",
         "https://github.com/dotnet/extensions",
@@ -275,21 +277,22 @@
       ]
     },
     {
-      "description": "roslyn",
       "groupName": "roslyn",
       "enabled": true,
-      "matchSourceUrlPrefixes": [
+      "labels": [":truck: private-dependencies"],
+      "matchSourceUrls": [
         "https://github.com/dotnet/roslyn"
       ]
     },
     {
       "description": "dotnet msbuild",
       "groupName": "dotnet msbuild",
-      "matchSourceUrlPrefixes": ["https://github.com/dotnet/msbuild"]
+      "matchSourceUrls": ["https://github.com/dotnet/msbuild"]
     },
     {
       "description": "azure functions",
       "groupName": "azure functions",
+      "labels": [":truck: private-dependencies"],
       "matchPackagePatterns": ["^microsoft.azure.functions"]
     },
     {
