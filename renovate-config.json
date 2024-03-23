@@ -251,7 +251,8 @@
       "matchSourceUrlPrefixes": [
         "https://github.com/ChilliCream/graphql-platform"
       ],
-      "labels": [":package: dependencies"]
+      "labels": [":package: dependencies"],
+      "allowedVersions": "!/tags-13-1-0-preview/"
     },
     {
       "description": "dotnet monorepo",
