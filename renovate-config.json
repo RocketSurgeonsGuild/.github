@@ -204,6 +204,18 @@
       "groupName": "Rocket Surgery Conventions"
     },
     {
+      "matchManagers": ["nuget"],
+      "matchPackagePatterns": [
+        "^Rocket\\.Surgery\\.Conventions",
+        "^Rocket\\.Surgery\\.CommandLine$",
+        "^Rocket\\.Surgery\\.Hosting$",
+        "^Rocket\\.Surgery\\.WebAssembly.Hosting$",
+        "^Rocket\\.Surgery\\.Aspire.Hosting$"
+      ],
+      "labels": [":package: dependencies"],
+      "groupName": "Rocket Surgery Conventions"
+    },
+    {
       "matchSourceUrls": [
         "https://github.com/RocketSurgeonsGuild/Testing"
       ],
