@@ -174,6 +174,12 @@
       "automerge": true
     },
     {
+      "matchPackagePatterns": ["^Aspire"],
+      "groupName": "aspire",
+      "labels": [":package: dependencies"],
+      "automerge": false
+    },
+    {
       "matchManagers": ["nuget"],
       "matchPackagePatterns": [
         "^System\\.Collections\\.Immutable",
@@ -267,6 +273,15 @@
       "labels": [":package: dependencies"]
     },
     {
+      "description": "azure functions",
+      "groupName": "azure functions",
+      "labels": [":truck: private-dependencies"],
+      "matchPackagePatterns": [
+        "^Microsoft\\.Azure\\.Functions",
+        "^microsoft\\.azure\\.functions"
+      ]
+    },
+    {
       "description": "dotnet monorepo",
       "groupName": "dotnet monorepo",
       "enabled": false,
@@ -301,12 +316,6 @@
       "description": "dotnet msbuild",
       "groupName": "dotnet msbuild",
       "matchSourceUrls": ["https://github.com/dotnet/msbuild"]
-    },
-    {
-      "description": "azure functions",
-      "groupName": "azure functions",
-      "labels": [":truck: private-dependencies"],
-      "matchPackagePatterns": ["^microsoft.azure.functions"]
     },
     {
       "description": "ReactiveUI",
