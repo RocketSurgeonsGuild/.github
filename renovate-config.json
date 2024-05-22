@@ -318,6 +318,15 @@
       "matchSourceUrls": ["https://github.com/dotnet/msbuild"]
     },
     {
+      "description": "Rx",
+      "groupName": "System.Reactive",
+      "matchPackagePatterns": [
+        "^System\\.Interactive",
+        "^System\\.Reactive",
+        "^Microsoft\\.Reactive\\.Testing"
+      ]
+    },
+    {
       "description": "ReactiveUI",
       "groupName": "ReactiveUI",
       "matchPackagePatterns": ["^ReactiveUI"]
