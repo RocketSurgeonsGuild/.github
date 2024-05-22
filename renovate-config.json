@@ -174,7 +174,9 @@
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^Aspire"],
+      "matchSourceUrls": [
+        "https://github.com/dotnet/aspire"
+      ],
       "groupName": "aspire",
       "labels": [":package: dependencies"],
       "automerge": false
