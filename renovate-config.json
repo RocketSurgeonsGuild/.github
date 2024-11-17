@@ -98,6 +98,12 @@
       "automerge": true
     },
     {
+      "matchPackagePatterns": ["^TUnit"],
+      "groupName": "TUnit",
+      "labels": [":truck: private-dependencies"],
+      "automerge": true
+    },
+    {
       "matchPackagePatterns": ["^Bogus"],
       "groupName": "bogus",
       "labels": [":truck: private-dependencies"],
