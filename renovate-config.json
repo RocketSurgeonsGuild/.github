@@ -349,10 +349,9 @@
       "groupName": "nuke",
       "matchPackagePatterns": [
         "^nuke.globaltool",
-        "^Nuke.Common",
+        "^Nuke.",
         "^Rocket\\.Surgery\\.Nuke"
       ],
-      "matchUpdateTypes": ["major", "minor", "patch"],
       "labels": [":truck: private-dependencies"],
       "automerge": true
     }
