@@ -68,12 +68,6 @@
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^FluentAssertions"],
-      "groupName": "fluentassertions",
-      "labels": [":truck: private-dependencies"],
-      "automerge": true
-    },
-    {
       "matchPackagePatterns": ["^NSubstitute"],
       "groupName": "nsubstitute",
       "labels": [":truck: private-dependencies"],
@@ -166,12 +160,6 @@
       "groupName": "open-telemetry",
       "labels": [":package: dependencies"],
       "automerge": false
-    },
-    {
-      "matchPackagePatterns": ["^FluentAssertions"],
-      "groupName": "fluentassertions",
-      "labels": [":truck: private-dependencies"],
-      "automerge": true
     },
     {
       "matchPackagePatterns": ["^Verify"],
