@@ -282,6 +282,7 @@
       "description": "dotnet monorepo",
       "groupName": "dotnet monorepo",
       "enabled": false,
+      "recreateWhen": "always",
       "matchSourceUrls": [
         "https://github.com/dotnet/aspnetcore",
         "https://github.com/dotnet/efcore",
@@ -293,6 +294,7 @@
       "description": "dotnet monorepo [minor/patch]",
       "groupName": "dotnet monorepo [minor/patch]",
       "enabled": true,
+      "recreateWhen": "always",
       "matchUpdateTypes": ["minor", "patch", "bump", "digest", "lockFileMaintenance", "pin", "pinDigest", "replacement", "rollback"],
       "matchSourceUrls": [
         "https://github.com/dotnet/aspnetcore",
