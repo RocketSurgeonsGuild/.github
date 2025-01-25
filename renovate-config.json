@@ -292,7 +292,7 @@
       "description": "dotnet monorepo [minor/patch]",
       "groupName": "dotnet monorepo [minor/patch]",
       "enabled": true,
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchUpdateTypes": ["minor", "patch", "bump", "digest", "lockFileMaintenance", "pin", "pinDigest", "replacement", "rollback"],
       "matchSourceUrls": [
         "https://github.com/dotnet/aspnetcore",
         "https://github.com/dotnet/efcore",
