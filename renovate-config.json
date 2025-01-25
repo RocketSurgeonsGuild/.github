@@ -11,6 +11,7 @@
   ],
   "prHourlyLimit": 10,
   "prConcurrentLimit": 0,
+  "recreateWhen": "auto",
   "hostRules": [
     {
       "concurrentRequestLimit": 999
