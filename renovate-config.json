@@ -281,10 +281,7 @@
     {
       "description": "dotnet monorepo",
       "groupName": "dotnet monorepo",
-      "enabled": true,
-      "separateMinorPatch": true,
-      "separateMultipleMinor": true,
-      "separateMultipleMajor": true,
+      "enabled": false,
       "recreateWhen": "always",
       "matchSourceUrls": [
         "https://github.com/dotnet/aspnetcore",
@@ -296,8 +293,10 @@
     {
       "description": "dotnet monorepo [minor/patch]",
       "groupName": "dotnet monorepo [minor/patch]",
-      "enabled": false,
+      "enabled": true,
       "recreateWhen": "always",
+      "separateMinorPatch": true,
+      "separateMultipleMinor": true,
       "matchUpdateTypes": ["minor", "patch", "bump", "digest", "lockFileMaintenance", "pin", "pinDigest", "replacement", "rollback"],
       "matchSourceUrls": [
         "https://github.com/dotnet/aspnetcore",
