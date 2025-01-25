@@ -280,8 +280,7 @@
     {
       "description": "dotnet monorepo",
       "groupName": "dotnet monorepo",
-      "enabled": true,
-      "matchUpdateTypes": ["major"],
+      "enabled": false,
       "matchSourceUrls": [
         "https://github.com/dotnet/aspnetcore",
         "https://github.com/dotnet/efcore",
