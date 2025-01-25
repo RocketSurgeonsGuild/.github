@@ -282,7 +282,9 @@
       "description": "dotnet monorepo",
       "groupName": "dotnet monorepo",
       "enabled": true,
+      "separateMinorPatch": true,
       "separateMultipleMinor": true,
+      "separateMultipleMajor": true,
       "recreateWhen": "always",
       "matchSourceUrls": [
         "https://github.com/dotnet/aspnetcore",
