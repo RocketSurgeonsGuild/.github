@@ -17,6 +17,20 @@
       "concurrentRequestLimit": 999
     }
   ],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/examples/**",
+    "**/__tests__/**",
+    "**/test/**",
+    "**/tests/**",
+    "**/__fixtures__/**",
+    "**/Directory.Packages.support.props"
+  ],
+  "nuget": {
+    "ignorePaths": ["**/node_modules/**", "**/bower_components/**", "**/vendor/**", "**/examples/**", "**/__fixtures__/**", "**/Directory.Packages.support.props"]
+  },
   "platformAutomerge": true,
   "automergeType": "pr",
   "automergeStrategy": "rebase",
@@ -25,35 +39,24 @@
   "rebaseLabel": ":trident: rebase",
   "stopUpdatingLabel": ":vertical_traffic_light: stop updating",
   "github-actions": {
-    "fileMatch": [
-      "(^workflow-templates|\\.github\\/workflows)\\/[^/]+\\.ya?ml$",
-      "(^|\\/)action\\.ya?ml$"
-    ],
+    "fileMatch": ["(^workflow-templates|\\.github\\/workflows)\\/[^/]+\\.ya?ml$", "(^|\\/)action\\.ya?ml$"],
     "automerge": true,
     "groupName": "github actions",
     "labels": [":truck: private-dependencies"]
   },
-  "gitIgnoredAuthors": [
-    "41898282+github-actions[bot]@users.noreply.github.com",
-    "33589210+rsg-bot@users.noreply.github.com"
-  ],
+  "gitIgnoredAuthors": ["41898282+github-actions[bot]@users.noreply.github.com", "33589210+rsg-bot@users.noreply.github.com"],
   "packageRules": [
     {
       "matchManagers": ["nuget"],
       "groupName": "build dependencies",
-      "matchPackagePatterns": [
-        "^Microsoft\\.NET\\.Test\\.Sdk$",
-        "^Rocket\\.Surgery\\.MSBuild"
-      ],
+      "matchPackagePatterns": ["^Microsoft\\.NET\\.Test\\.Sdk$", "^Rocket\\.Surgery\\.MSBuild"],
       "labels": [":truck: private-dependencies"],
       "automerge": true
     },
     {
       "groupName": "roslynator",
       "labels": [":truck: private-dependencies"],
-      "matchSourceUrls": [
-        "https://github.com/dotnet/roslynator"
-      ],
+      "matchSourceUrls": ["https://github.com/dotnet/roslynator"],
       "automerge": true
     },
     {
@@ -105,11 +108,7 @@
       "automerge": true
     },
     {
-      "matchPackagePatterns": [
-        "^ReportGenerator",
-        "^reportgenerator",
-        "^dotnet-reportgenerator"
-      ],
+      "matchPackagePatterns": ["^ReportGenerator", "^reportgenerator", "^dotnet-reportgenerator"],
       "groupName": "reportgenerator",
       "labels": [":truck: private-dependencies"],
       "automerge": true
@@ -169,21 +168,14 @@
       "automerge": true
     },
     {
-      "matchSourceUrls": [
-        "https://github.com/dotnet/aspire"
-      ],
+      "matchSourceUrls": ["https://github.com/dotnet/aspire"],
       "groupName": "aspire",
       "labels": [":package: dependencies"],
       "automerge": false
     },
     {
       "matchManagers": ["nuget"],
-      "matchPackagePatterns": [
-        "^System\\.Collections\\.Immutable",
-        "^System\\.Interactive",
-        "^System\\.Reactive",
-        "^Humanizer"
-      ],
+      "matchPackagePatterns": ["^System\\.Collections\\.Immutable", "^System\\.Interactive", "^System\\.Reactive", "^Humanizer"],
       "labels": [":package: dependencies"],
       "automerge": true
     },
@@ -193,16 +185,12 @@
       "groupName": "Rocket Surgery Other"
     },
     {
-      "matchSourceUrls": [
-        "https://github.com/RocketSurgeonsGuild/LaunchPad"
-      ],
+      "matchSourceUrls": ["https://github.com/RocketSurgeonsGuild/LaunchPad"],
       "labels": [":package: dependencies"],
       "groupName": "Rocket Surgery Launch Pad"
     },
     {
-      "matchSourceUrls": [
-        "https://github.com/RocketSurgeonsGuild/Conventions"
-      ],
+      "matchSourceUrls": ["https://github.com/RocketSurgeonsGuild/Conventions"],
       "labels": [":package: dependencies"],
       "groupName": "Rocket Surgery Conventions"
     },
@@ -219,16 +207,12 @@
       "groupName": "Rocket Surgery Conventions"
     },
     {
-      "matchSourceUrls": [
-        "https://github.com/RocketSurgeonsGuild/Testing"
-      ],
+      "matchSourceUrls": ["https://github.com/RocketSurgeonsGuild/Testing"],
       "labels": [":truck: private-dependencies"],
       "groupName": "Rocket Surgery Testing"
     },
     {
-      "matchSourceUrls": [
-        "https://github.com/RocketSurgeonsGuild/Extensions"
-      ],
+      "matchSourceUrls": ["https://github.com/RocketSurgeonsGuild/Extensions"],
       "labels": [":package: dependencies"],
       "groupName": "Rocket Surgery Extensions"
     },
@@ -264,31 +248,21 @@
     },
     {
       "groupName": "chillicream-gql",
-      "matchSourceUrlPrefixes": [
-        "https://github.com/ChilliCream/graphql-platform"
-      ],
+      "matchSourceUrlPrefixes": ["https://github.com/ChilliCream/graphql-platform"],
       "labels": [":package: dependencies"]
     },
     {
       "description": "azure functions",
       "groupName": "azure functions",
       "labels": [":truck: private-dependencies"],
-      "matchPackagePatterns": [
-        "^Microsoft\\.Azure\\.Functions",
-        "^microsoft\\.azure\\.functions"
-      ]
+      "matchPackagePatterns": ["^Microsoft\\.Azure\\.Functions", "^microsoft\\.azure\\.functions"]
     },
     {
       "description": "dotnet monorepo",
       "groupName": "dotnet monorepo",
       "enabled": false,
       "recreateWhen": "always",
-      "matchSourceUrls": [
-        "https://github.com/dotnet/aspnetcore",
-        "https://github.com/dotnet/efcore",
-        "https://github.com/dotnet/extensions",
-        "https://github.com/dotnet/runtime"
-      ]
+      "matchSourceUrls": ["https://github.com/dotnet/aspnetcore", "https://github.com/dotnet/efcore", "https://github.com/dotnet/extensions", "https://github.com/dotnet/runtime"]
     },
     {
       "description": "dotnet monorepo [minor/patch]",
@@ -298,20 +272,13 @@
       "separateMinorPatch": true,
       "separateMultipleMinor": true,
       "matchUpdateTypes": ["minor", "patch", "bump", "digest", "lockFileMaintenance", "pin", "pinDigest", "replacement", "rollback"],
-      "matchSourceUrls": [
-        "https://github.com/dotnet/aspnetcore",
-        "https://github.com/dotnet/efcore",
-        "https://github.com/dotnet/extensions",
-        "https://github.com/dotnet/runtime"
-      ]
+      "matchSourceUrls": ["https://github.com/dotnet/aspnetcore", "https://github.com/dotnet/efcore", "https://github.com/dotnet/extensions", "https://github.com/dotnet/runtime"]
     },
     {
       "groupName": "roslyn",
       "enabled": true,
       "labels": [":truck: private-dependencies"],
-      "matchSourceUrls": [
-        "https://github.com/dotnet/roslyn"
-      ]
+      "matchSourceUrls": ["https://github.com/dotnet/roslyn"]
     },
     {
       "description": "dotnet msbuild",
@@ -321,11 +288,7 @@
     {
       "description": "Rx",
       "groupName": "System.Reactive",
-      "matchPackagePatterns": [
-        "^System\\.Interactive",
-        "^System\\.Reactive",
-        "^Microsoft\\.Reactive\\.Testing"
-      ]
+      "matchPackagePatterns": ["^System\\.Interactive", "^System\\.Reactive", "^Microsoft\\.Reactive\\.Testing"]
     },
     {
       "description": "ReactiveUI",
@@ -340,11 +303,7 @@
     {
       "matchManagers": ["nuget"],
       "groupName": "nuke",
-      "matchPackagePatterns": [
-        "^nuke.globaltool",
-        "^Nuke.",
-        "^Rocket\\.Surgery\\.Nuke"
-      ],
+      "matchPackagePatterns": ["^nuke.globaltool", "^Nuke.", "^Rocket\\.Surgery\\.Nuke"],
       "labels": [":truck: private-dependencies"],
       "automerge": true
     }
