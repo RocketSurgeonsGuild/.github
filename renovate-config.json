@@ -26,13 +26,11 @@
     "**/test/**",
     "**/tests/**",
     "**/__fixtures__/**",
-    "**/Directory.Packages.support.props"
+    "**/Directory.Packages.support.props",
+    "**/*.g.cs",
+    "**/*.verified.*"
   ],
   "nuget": {
-    "ignorePaths": ["**/node_modules/**", "**/bower_components/**", "**/vendor/**", "**/examples/**", "**/__fixtures__/**", "**/Directory.Packages.support.props"],
-    "managerFilePatterns": ["/\\.cs$/"]
-  },
-  "cake": {
     "managerFilePatterns": ["/\\.cs$/"]
   },
   "platformAutomerge": true,
