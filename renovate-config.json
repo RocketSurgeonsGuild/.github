@@ -26,11 +26,18 @@
     "**/test/**",
     "**/tests/**",
     "**/__fixtures__/**",
-    "**/Directory.Packages.support.props",
-    "**/*.g.cs",
-    "**/*.verified.*"
+    "**/Directory.Packages.support.props"
   ],
   "nuget": {
+    "ignorePaths": ["**/Directory.Packages.support.props",
+    "**/*.g.cs",
+    "**/*.verified.*"],
+    "managerFilePatterns": ["/\\.cs$/"]
+  },
+  "cake": {
+    "ignorePaths": ["**/Directory.Packages.support.props",
+    "**/*.g.cs",
+    "**/*.verified.*"],
     "managerFilePatterns": ["/\\.cs$/"]
   },
   "platformAutomerge": true,
