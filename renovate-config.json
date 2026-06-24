@@ -254,14 +254,14 @@
       "description": "dotnet monorepo",
       "groupName": "dotnet monorepo",
       "enabled": false,
-      "recreateWhen": "always",
+      "recreateWhen": "auto",
       "matchSourceUrls": ["https://github.com/dotnet/aspnetcore", "https://github.com/dotnet/efcore", "https://github.com/dotnet/extensions", "https://github.com/dotnet/runtime"]
     },
     {
       "description": "dotnet monorepo [minor/patch]",
       "groupName": "dotnet monorepo [minor/patch]",
       "enabled": true,
-      "recreateWhen": "always",
+      "recreateWhen": "auto",
       "separateMinorPatch": true,
       "separateMultipleMinor": true,
       "matchUpdateTypes": ["minor", "patch", "bump", "digest", "lockFileMaintenance", "pin", "pinDigest", "replacement", "rollback"],
