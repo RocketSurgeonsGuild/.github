@@ -65,20 +65,26 @@
       "automerge": true
     },
     {
+      "matchPackagePatterns": ["^ModularPipelines"],
+      "groupName": "ModularPipelines",
+      "labels": [":truck: private-dependencies"],
+      "automerge": true
+    },
+    {
       "matchPackagePatterns": ["^NSubstitute"],
-      "groupName": "nsubstitute",
+      "groupName": "NSubstitute",
       "labels": [":truck: private-dependencies"],
       "automerge": true
     },
     {
       "matchPackagePatterns": ["^Moq"],
-      "groupName": "moq",
+      "groupName": "Moq",
       "labels": [":truck: private-dependencies"],
       "automerge": true
     },
     {
       "matchPackagePatterns": ["^FakeItEasy"],
-      "groupName": "fakeiteasy",
+      "groupName": "FakeItEasy",
       "labels": [":truck: private-dependencies"],
       "automerge": true
     },
@@ -96,25 +102,25 @@
     },
     {
       "matchPackagePatterns": ["^Bogus"],
-      "groupName": "bogus",
+      "groupName": "Bogus",
       "labels": [":truck: private-dependencies"],
       "automerge": true
     },
     {
       "matchPackagePatterns": ["^ReportGenerator", "^reportgenerator", "^dotnet-reportgenerator"],
-      "groupName": "reportgenerator",
+      "groupName": "ReportGenerator",
       "labels": [":truck: private-dependencies"],
       "automerge": true
     },
     {
       "matchPackagePatterns": ["^JetBrains", "^jetbrains"],
-      "groupName": "jetbrains",
+      "groupName": "JetBrains",
       "labels": [":truck: private-dependencies"],
       "automerge": true
     },
     {
       "matchPackagePatterns": ["^GitVersion", "^gitversion"],
-      "groupName": "gitversion",
+      "groupName": "GitVersion",
       "labels": [":truck: private-dependencies"],
       "automerge": true
     },
