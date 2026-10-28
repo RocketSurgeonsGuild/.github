@@ -322,6 +322,11 @@
       "matchPackagePatterns": ["^ReactiveMarbles"]
     },
     {
+      "description": "Uno Platform",
+      "groupName": "UnoPlatform",
+      "matchPackagePatterns": ["^Uno"]
+    },
+    {
       "matchManagers": ["nuget"],
       "groupName": "nuke",
       "matchPackagePatterns": ["^nuke.globaltool", "^Nuke.", "^Rocket\\.Surgery\\.Nuke"],
