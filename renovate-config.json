@@ -28,14 +28,21 @@
   "automergeType": "pr",
   "automergeStrategy": "rebase",
   "rebaseWhen": "auto",
-  "labels": [":package: dependencies"],
+  "labels": [
+    ":package: dependencies"
+  ],
   "rebaseLabel": ":trident: rebase",
   "stopUpdatingLabel": ":vertical_traffic_light: stop updating",
   "github-actions": {
-    "fileMatch": ["(^workflow-templates|\\.github\\/workflows)\\/[^/]+\\.ya?ml$", "(^|\\/)action\\.ya?ml$"],
+    "fileMatch": [
+      "(^workflow-templates|\\.github\\/workflows)\\/[^/]+\\.ya?ml$",
+      "(^|\\/)action\\.ya?ml$"
+    ],
     "automerge": true,
     "groupName": "github actions",
-    "labels": [":truck: private-dependencies"]
+    "labels": [
+      ":truck: private-dependencies"
+    ]
   },
   "customManagers": [
     {
@@ -62,161 +69,279 @@
   ],
   "packageRules": [
     {
-      "matchManagers": ["nuget"],
+      "matchManagers": [
+        "nuget"
+      ],
       "groupName": "build dependencies",
-      "matchPackagePatterns": ["^Microsoft\\.NET\\.Test\\.Sdk$", "^Rocket\\.Surgery\\.MSBuild"],
-      "labels": [":truck: private-dependencies"],
+      "matchPackagePatterns": [
+        "^Microsoft\\.NET\\.Test\\.Sdk$",
+        "^Rocket\\.Surgery\\.MSBuild"
+      ],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
       "groupName": "roslynator",
-      "labels": [":truck: private-dependencies"],
-      "matchSourceUrls": ["https://github.com/dotnet/roslynator"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
+      "matchSourceUrls": [
+        "https://github.com/dotnet/roslynator"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^docfx"],
+      "matchPackagePatterns": [
+        "^docfx"
+      ],
       "groupName": "docfx",
-      "labels": [":truck: private-dependencies"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^Polyfill"],
+      "matchPackagePatterns": [
+        "^Polyfill"
+      ],
       "groupName": "polyfill",
-      "labels": [":truck: private-dependencies"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^ModularPipelines"],
+      "matchPackagePatterns": [
+        "^ModularPipelines"
+      ],
       "groupName": "ModularPipelines",
-      "labels": [":truck: private-dependencies"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^NSubstitute"],
+      "matchPackagePatterns": [
+        "^NSubstitute"
+      ],
       "groupName": "NSubstitute",
-      "labels": [":truck: private-dependencies"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^Moq"],
+      "matchPackagePatterns": [
+        "^Moq"
+      ],
       "groupName": "Moq",
-      "labels": [":truck: private-dependencies"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^FakeItEasy"],
+      "matchPackagePatterns": [
+        "^FakeItEasy"
+      ],
       "groupName": "FakeItEasy",
-      "labels": [":truck: private-dependencies"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^coverlet"],
+      "matchPackagePatterns": [
+        "^coverlet"
+      ],
       "groupName": "coverlet",
-      "labels": [":truck: private-dependencies"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^TUnit"],
+      "matchPackagePatterns": [
+        "^TUnit"
+      ],
       "groupName": "TUnit",
-      "labels": [":truck: private-dependencies"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^Bogus"],
+      "matchPackagePatterns": [
+        "^Bogus"
+      ],
       "groupName": "Bogus",
-      "labels": [":truck: private-dependencies"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^ReportGenerator", "^reportgenerator", "^dotnet-reportgenerator"],
+      "matchPackagePatterns": [
+        "^ReportGenerator",
+        "^reportgenerator",
+        "^dotnet-reportgenerator"
+      ],
       "groupName": "ReportGenerator",
-      "labels": [":truck: private-dependencies"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^JetBrains", "^jetbrains"],
+      "matchPackagePatterns": [
+        "^JetBrains",
+        "^jetbrains"
+      ],
       "groupName": "JetBrains",
-      "labels": [":truck: private-dependencies"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^GitVersion", "^gitversion"],
+      "matchPackagePatterns": [
+        "^GitVersion",
+        "^gitversion"
+      ],
       "groupName": "GitVersion",
-      "labels": [":truck: private-dependencies"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^xunit"],
+      "matchPackagePatterns": [
+        "^xunit"
+      ],
       "groupName": "xunit",
-      "labels": [":truck: private-dependencies"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^bunit"],
+      "matchPackagePatterns": [
+        "^bunit"
+      ],
       "groupName": "bunit",
-      "labels": [":truck: private-dependencies"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchPackagePatterns": ["^FluentValidation"],
+      "matchPackagePatterns": [
+        "^FluentValidation"
+      ],
       "groupName": "fluentvalidation",
-      "labels": [":package: dependencies"],
+      "labels": [
+        ":package: dependencies"
+      ],
       "automerge": false
     },
     {
-      "matchPackagePatterns": ["^NodaTime"],
+      "matchPackagePatterns": [
+        "^NodaTime"
+      ],
       "groupName": "nodatime",
-      "labels": [":package: dependencies"],
+      "labels": [
+        ":package: dependencies"
+      ],
       "automerge": false
     },
     {
-      "matchPackagePatterns": ["^DryIoc"],
+      "matchPackagePatterns": [
+        "^DryIoc"
+      ],
       "groupName": "dryioc",
-      "labels": [":package: dependencies"],
+      "labels": [
+        ":package: dependencies"
+      ],
       "automerge": false
     },
     {
-      "matchPackagePatterns": ["^OpenTelemetry"],
+      "matchPackagePatterns": [
+        "^OpenTelemetry"
+      ],
       "groupName": "open-telemetry",
-      "labels": [":package: dependencies"],
+      "labels": [
+        ":package: dependencies"
+      ],
       "automerge": false
     },
     {
-      "matchPackagePatterns": ["^Verify"],
+      "matchPackagePatterns": [
+        "^Verify"
+      ],
       "groupName": "verify",
-      "labels": [":truck: private-dependencies"],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchSourceUrls": ["https://github.com/dotnet/aspire"],
+      "matchSourceUrls": [
+        "https://github.com/dotnet/aspire"
+      ],
       "groupName": "aspire",
-      "labels": [":package: dependencies"],
+      "labels": [
+        ":package: dependencies"
+      ],
       "automerge": false
     },
     {
-      "matchManagers": ["nuget"],
-      "matchPackagePatterns": ["^System\\.Collections\\.Immutable", "^System\\.Interactive", "^System\\.Reactive", "^Humanizer"],
-      "labels": [":package: dependencies"],
+      "matchManagers": [
+        "nuget"
+      ],
+      "matchPackagePatterns": [
+        "^System\\.Collections\\.Immutable",
+        "^System\\.Interactive",
+        "^System\\.Reactive",
+        "^Humanizer"
+      ],
+      "labels": [
+        ":package: dependencies"
+      ],
       "automerge": true
     },
     {
-      "matchSourceUrlPrefixes": ["https://github.com/RocketSurgeonsGuild"],
-      "labels": [":package: dependencies"],
+      "matchSourceUrlPrefixes": [
+        "https://github.com/RocketSurgeonsGuild"
+      ],
+      "labels": [
+        ":package: dependencies"
+      ],
       "groupName": "Rocket Surgery Other"
     },
     {
-      "matchSourceUrls": ["https://github.com/RocketSurgeonsGuild/LaunchPad"],
-      "labels": [":package: dependencies"],
+      "matchSourceUrls": [
+        "https://github.com/RocketSurgeonsGuild/LaunchPad"
+      ],
+      "labels": [
+        ":package: dependencies"
+      ],
       "groupName": "Rocket Surgery Launch Pad"
     },
     {
-      "matchSourceUrls": ["https://github.com/RocketSurgeonsGuild/Conventions"],
-      "labels": [":package: dependencies"],
+      "matchSourceUrls": [
+        "https://github.com/RocketSurgeonsGuild/Conventions"
+      ],
+      "labels": [
+        ":package: dependencies"
+      ],
       "groupName": "Rocket Surgery Conventions"
     },
     {
-      "matchManagers": ["nuget"],
+      "matchManagers": [
+        "nuget"
+      ],
       "matchPackagePatterns": [
         "^Rocket\\.Surgery\\.Conventions",
         "^Rocket\\.Surgery\\.CommandLine$",
@@ -224,66 +349,114 @@
         "^Rocket\\.Surgery\\.WebAssembly.Hosting$",
         "^Rocket\\.Surgery\\.Aspire.Hosting$"
       ],
-      "labels": [":package: dependencies"],
+      "labels": [
+        ":package: dependencies"
+      ],
       "groupName": "Rocket Surgery Conventions"
     },
     {
-      "matchSourceUrls": ["https://github.com/RocketSurgeonsGuild/Testing"],
-      "labels": [":truck: private-dependencies"],
+      "matchSourceUrls": [
+        "https://github.com/RocketSurgeonsGuild/Testing"
+      ],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "groupName": "Rocket Surgery Testing"
     },
     {
-      "matchSourceUrls": ["https://github.com/RocketSurgeonsGuild/Extensions"],
-      "labels": [":package: dependencies"],
+      "matchSourceUrls": [
+        "https://github.com/RocketSurgeonsGuild/Extensions"
+      ],
+      "labels": [
+        ":package: dependencies"
+      ],
       "groupName": "Rocket Surgery Extensions"
     },
     {
-      "matchPackagePatterns": ["^RavenDb"],
+      "matchPackagePatterns": [
+        "^RavenDb"
+      ],
       "groupName": "ravendb",
-      "labels": [":package: dependencies"]
+      "labels": [
+        ":package: dependencies"
+      ]
     },
     {
-      "matchSourceUrlPrefixes": ["https://github.com/Serilog"],
+      "matchSourceUrlPrefixes": [
+        "https://github.com/Serilog"
+      ],
       "groupName": "serilog",
-      "labels": [":package: dependencies"]
+      "labels": [
+        ":package: dependencies"
+      ]
     },
     {
-      "matchPackagePatterns": ["^Serilog"],
+      "matchPackagePatterns": [
+        "^Serilog"
+      ],
       "groupName": "serilog",
-      "labels": [":package: dependencies"]
+      "labels": [
+        ":package: dependencies"
+      ]
     },
     {
-      "matchPackagePatterns": ["^NetTopologySuite"],
+      "matchPackagePatterns": [
+        "^NetTopologySuite"
+      ],
       "groupName": "nettopologysuite",
-      "labels": [":package: dependencies"]
+      "labels": [
+        ":package: dependencies"
+      ]
     },
     {
-      "matchPackagePatterns": ["^MediatR"],
+      "matchPackagePatterns": [
+        "^MediatR"
+      ],
       "groupName": "mediatr",
-      "labels": [":package: dependencies"]
+      "labels": [
+        ":package: dependencies"
+      ]
     },
     {
       "groupName": "spectre",
-      "matchSourceUrlPrefixes": ["https://github.com/spectreconsole"],
-      "labels": [":package: dependencies"]
+      "matchSourceUrlPrefixes": [
+        "https://github.com/spectreconsole"
+      ],
+      "labels": [
+        ":package: dependencies"
+      ]
     },
     {
       "groupName": "chillicream-gql",
-      "matchSourceUrlPrefixes": ["https://github.com/ChilliCream/graphql-platform"],
-      "labels": [":package: dependencies"]
+      "matchSourceUrlPrefixes": [
+        "https://github.com/ChilliCream/graphql-platform"
+      ],
+      "labels": [
+        ":package: dependencies"
+      ]
     },
     {
       "description": "azure functions",
       "groupName": "azure functions",
-      "labels": [":truck: private-dependencies"],
-      "matchPackagePatterns": ["^Microsoft\\.Azure\\.Functions", "^microsoft\\.azure\\.functions"]
+      "labels": [
+        ":truck: private-dependencies"
+      ],
+      "matchPackagePatterns": [
+        "^Microsoft\\.Azure\\.Functions",
+        "^microsoft\\.azure\\.functions"
+      ]
     },
     {
       "description": "dotnet monorepo",
       "groupName": "dotnet monorepo",
       "enabled": false,
       "recreateWhen": "auto",
-      "matchSourceUrls": ["https://github.com/dotnet/aspnetcore", "https://github.com/dotnet/efcore", "https://github.com/dotnet/extensions", "https://github.com/dotnet/runtime"]
+      "matchSourceUrls": [
+        "https://github.com/dotnet/aspnetcore",
+        "https://github.com/dotnet/efcore",
+        "https://github.com/dotnet/extensions",
+        "https://github.com/dotnet/runtime"
+      ]
     },
     {
       "description": "dotnet monorepo [minor/patch]",
@@ -292,45 +465,273 @@
       "recreateWhen": "auto",
       "separateMinorPatch": true,
       "separateMultipleMinor": true,
-      "matchUpdateTypes": ["minor", "patch", "bump", "digest", "lockFileMaintenance", "pin", "pinDigest", "replacement", "rollback"],
-      "matchSourceUrls": ["https://github.com/dotnet/aspnetcore", "https://github.com/dotnet/efcore", "https://github.com/dotnet/extensions", "https://github.com/dotnet/runtime"]
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "bump",
+        "digest",
+        "lockFileMaintenance",
+        "pin",
+        "pinDigest",
+        "replacement",
+        "rollback"
+      ],
+      "matchSourceUrls": [
+        "https://github.com/dotnet/aspnetcore",
+        "https://github.com/dotnet/efcore",
+        "https://github.com/dotnet/extensions",
+        "https://github.com/dotnet/runtime"
+      ]
     },
     {
       "groupName": "roslyn",
       "enabled": true,
-      "labels": [":truck: private-dependencies"],
-      "matchSourceUrls": ["https://github.com/dotnet/roslyn"]
+      "labels": [
+        ":truck: private-dependencies"
+      ],
+      "matchSourceUrls": [
+        "https://github.com/dotnet/roslyn"
+      ]
     },
     {
       "description": "dotnet msbuild",
       "groupName": "dotnet msbuild",
-      "matchSourceUrls": ["https://github.com/dotnet/msbuild"]
+      "matchSourceUrls": [
+        "https://github.com/dotnet/msbuild"
+      ]
     },
     {
       "description": "Rx",
       "groupName": "System.Reactive",
-      "matchPackagePatterns": ["^System\\.Interactive", "^System\\.Reactive", "^Microsoft\\.Reactive\\.Testing"]
+      "matchPackagePatterns": [
+        "^System\\.Interactive",
+        "^System\\.Reactive",
+        "^Microsoft\\.Reactive\\.Testing"
+      ]
     },
     {
       "description": "ReactiveUI",
       "groupName": "ReactiveUI",
-      "matchPackagePatterns": ["^ReactiveUI"]
+      "matchPackagePatterns": [
+        "^ReactiveUI"
+      ]
     },
     {
       "description": "ReactiveMarbles",
       "groupName": "ReactiveMarbles",
-      "matchPackagePatterns": ["^ReactiveMarbles"]
+      "matchPackagePatterns": [
+        "^ReactiveMarbles"
+      ]
     },
     {
       "description": "Uno Platform",
       "groupName": "UnoPlatform",
-      "matchPackagePatterns": ["^Uno"]
+      "matchPackagePatterns": [
+        "^Uno"
+      ]
     },
     {
-      "matchManagers": ["nuget"],
+      "description": "ZeroAlloc.Mediator",
+      "groupName": "ZeroAlloc.Mediator",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Mediator"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Validation",
+      "groupName": "ZeroAlloc.Validation",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Validation"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Analyzer",
+      "groupName": "ZeroAlloc.Analyzer",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Analyzer"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Inject",
+      "groupName": "ZeroAlloc.Inject",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Inject"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.ValueObjects",
+      "groupName": "ZeroAlloc.ValueObjects",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.ValueObjects"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Pipeline",
+      "groupName": "ZeroAlloc.Pipeline",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Pipeline"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Specification",
+      "groupName": "ZeroAlloc.Specification",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Specification"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Results",
+      "groupName": "ZeroAlloc.Results",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Results"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Rest",
+      "groupName": "ZeroAlloc.Rest",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Rest"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Collections",
+      "groupName": "ZeroAlloc.Collections",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Collections"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.AsyncEvents",
+      "groupName": "ZeroAlloc.AsyncEvents",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.AsyncEvents"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Notify",
+      "groupName": "ZeroAlloc.Notify",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Notify"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Telemetry",
+      "groupName": "ZeroAlloc.Telemetry",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Telemetry"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.EventSourcing",
+      "groupName": "ZeroAlloc.EventSourcing",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.EventSourcing"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Serialisation",
+      "groupName": "ZeroAlloc.Serialisation",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Serialisation"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Scheduling",
+      "groupName": "ZeroAlloc.Scheduling",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Scheduling"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Resilience",
+      "groupName": "ZeroAlloc.Resilience",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Resilience"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Cache",
+      "groupName": "ZeroAlloc.Cache",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Cache"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.StateMachine",
+      "groupName": "ZeroAlloc.StateMachine",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.StateMachine"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Outbox",
+      "groupName": "ZeroAlloc.Outbox",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Outbox"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Saga",
+      "groupName": "ZeroAlloc.Saga",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Saga"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Authorization",
+      "groupName": "ZeroAlloc.Authorization",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Authorization"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Mapping",
+      "groupName": "ZeroAlloc.Mapping",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Mapping"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.ORM",
+      "groupName": "ZeroAlloc.ORM",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.ORM"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Flux",
+      "groupName": "ZeroAlloc.Flux",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Flux"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.Templates",
+      "groupName": "ZeroAlloc.Templates",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.Templates"
+      ]
+    },
+    {
+      "description": "ZeroAlloc.TestHelpers",
+      "groupName": "ZeroAlloc.TestHelpers",
+      "matchPackagePatterns": [
+        "^ZeroAlloc.TestHelpers"
+      ]
+    },
+    {
+      "matchManagers": [
+        "nuget"
+      ],
       "groupName": "nuke",
-      "matchPackagePatterns": ["^nuke.globaltool", "^Nuke.", "^Rocket\\.Surgery\\.Nuke"],
-      "labels": [":truck: private-dependencies"],
+      "matchPackagePatterns": [
+        "^nuke.globaltool",
+        "^Nuke.",
+        "^Rocket\\.Surgery\\.Nuke"
+      ],
+      "labels": [
+        ":truck: private-dependencies"
+      ],
       "automerge": true
     }
   ]
