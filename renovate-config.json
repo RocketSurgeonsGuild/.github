@@ -733,6 +733,85 @@
         ":truck: private-dependencies"
       ],
       "automerge": true
+    },
+    {
+      "description": "Dependencies declared under the build, test, sample, benchmark and docs folders never reach the consumers of our packages. Last in the list so it wins over the grouping rules above; a repository can still mark one public in its own packageRules",
+      "matchFileNames": [
+        "build/**",
+        "test/**",
+        "tests/**",
+        "sample/**",
+        "samples/**",
+        "benchmarks/**",
+        "docs/**"
+      ],
+      "labels": [
+        ":truck: private-dependencies"
+      ]
+    },
+    {
+      "description": "Build, test, docs and tooling dependencies shared by every repository: consumers of our packages never get them. Last in the list so it wins over the grouping rules above (Rocket Surgery Other, spectre, dotnet msbuild); a repository whose shipped code depends on one of these marks it public in its own packageRules",
+      "matchDepNames": [
+        "Rocket.Surgery.Sdk",
+        "Rocket.Surgery.Sdk.*",
+        "Rocket.Surgery.*.Sdk",
+        "Rocket.Surgery.*.Sdk.*",
+        "Rocket.Surgery.AssemblyInfo",
+        "Verify",
+        "Verify.*",
+        "TUnit",
+        "TUnit.*",
+        "github:microsoft/apm",
+        "pkl",
+        "hk",
+        "tombi",
+        "node",
+        "mise",
+        "jdx/mise-action",
+        "astro",
+        "@astrojs/**",
+        "starlight-*",
+        "@types/node",
+        "oxfmt",
+        "biome",
+        "actionlint",
+        "github:eljulians/skillfile",
+        "github:yvgude/lean-ctx",
+        "dotnet-sdk",
+        "dotnet-runtime",
+        "Aspire.Cli",
+        "NuGet.Mcp.Server",
+        "gitversion.tool",
+        "gitreleasemanager.tool",
+        "dotnet-reportgenerator-globaltool",
+        "dotnet-coverage",
+        "dotnet-outdated-tool",
+        "docfx",
+        "hertzole.docfx2astro",
+        "Rocket.Surgery.ApiReference",
+        "mcr.microsoft.com/vscode/devcontainers/**",
+        "Sourcy.*",
+        "Rocket.Surgery.ModularPipelines.Extensions",
+        "Joinery.Dovetail.ModularPipelines",
+        "Joinery.Dovetail.Sdk",
+        "Microsoft.VisualStudio.SolutionPersistence",
+        "Specular",
+        "MSBuild.ProjectCreation",
+        "MSBuild.StructuredLogger.Utils",
+        "ProcessX",
+        "Microsoft.Playwright",
+        "BenchmarkDotNet",
+        "Microsoft.Testing.Extensions.*",
+        "Microsoft.Build",
+        "Microsoft.Build.*",
+        "Microsoft.DotNet.ApiCompat.Task",
+        "Spectre.Console.Analyzer",
+        "ZeroAlloc.Analyzers",
+        "Microsoft.Sbom.Targets"
+      ],
+      "labels": [
+        ":truck: private-dependencies"
+      ]
     }
   ]
 }
